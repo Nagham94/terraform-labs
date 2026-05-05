@@ -32,3 +32,12 @@ module "rds" {
   private_subnet_id2   = module.vpc.private_subnet_id2
   vpc_id               = module.vpc.vpc_id
 }
+
+module "elasticache" {
+  source               = "./modules/elasticache"
+  project_name         = var.project_name
+  env                  = var.env
+  private_subnet_id    = module.vpc.private_subnet_id
+  private_subnet_id2   = module.vpc.private_subnet_id2
+  vpc_id               = module.vpc.vpc_id
+}
