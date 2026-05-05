@@ -13,3 +13,7 @@ variable "public_subnet_cidr" {
 variable "private_subnet_cidr" {
   type = string
 }
+
+variable "private_subnet_cidr2" {
+  type = string
+}

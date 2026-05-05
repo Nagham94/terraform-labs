@@ -28,6 +28,12 @@ variable "private_subnet_cidr" {
   default     = "10.0.2.0/24"
 }
 
+variable "private_subnet_cidr2" {
+  description = "Private subnet CIDR (AZ 2)"
+  type        = string
+  default     = "10.0.3.0/24"
+}
+
 variable "instance_type" {
   description = "instance_type for ec2 instance"
   type        = string
@@ -37,4 +43,5 @@ variable "instance_type" {
 variable "env" {
   description = "Environment for the deployment"
   type        = string
+  default     = "dev"
 }
